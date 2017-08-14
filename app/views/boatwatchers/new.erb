@@ -1,0 +1,19 @@
+<h1>Yarr! Sign yeself up to watch some boats</h1>
+
+<form class="form" action="/boatwatchers" method="POST">
+  <label for="username">Yerr Boatwatcher Name:</label>
+  <input type="text" name="boatwatcher[username]">
+  <label for="email">Yarr Email:</label>
+  <input type="text" name="boatwatcher[email]">
+  <label for="password">And Yerr Password:</label>
+  <input type="password" name="boatwatcher[password]">
+  <input type="submit" value="Sign Me Up For the Crew!!!">
+</form>
+
+<ul>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  <% end %>
+</ul>
