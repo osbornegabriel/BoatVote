@@ -1,30 +1,10 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+A registered user can right-click on a photo online. When selecting "I found a boat!" in the drop-down menu, the photo will be added to their account on BoatVote. Other users will then vote on the boat.
 
-### Purpose
-The Sinatra Skeleton:
+Users and non-registered users can vote on Boat-photos, as to whether or not the photo is a picture of a boat.
+('That's a boat!', "I'm not sure if that's a boat", or "I don't think that's a boat.")
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+Top boat-watchers will appear on a top-five ranking list. Worst boat-watchers will appear on a bottom-five ranking list.
 
-### Quickstart
+BoatVote appears to be on a single, fun, interactive page. The user never needs to change locations to enjoy all the features of boatvote.
 
-1.  `bundle install`
-2.  `shotgun config.ru`
 
-As needed, create models & migrations with the `rake` tasks:
-
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
-
-### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
