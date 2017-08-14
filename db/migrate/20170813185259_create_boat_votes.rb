@@ -1,6 +1,6 @@
-class CreateBoatvotes < ActiveRecord::Migration
+class CreateBoatVotes < ActiveRecord::Migration
   def change
-    create_table :boatvotes do |t|
+    create_table :boat_votes do |t|
       t.integer :voter_id, null: false
       t.integer :boat_id, null: false
       t.boolean :vote, default: nil
