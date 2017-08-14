@@ -1,0 +1,42 @@
+body {
+    margin: 2%;
+    background-color: skyblue;
+}
+
+a {
+  text-shadow: 1px 1px black;
+}
+
+a:visited{
+  color: rgb(255,218,185);
+}
+
+a:hover{
+  color: #ffb0b8;
+}
+
+a:active{
+  color: red;
+}
+
+#logout-button {
+    background:none;
+    color:inherit;
+    border:none;
+    padding:0;
+    font: inherit;
+    color: white;
+    text-shadow: 1px 1px black;;
+}
+
+#logout-button:focus {
+  outline: none;
+}
+
+#logout-button:hover{
+  color: #ffb0b8;
+}
+
+#logout-button:active{
+  color: red;
+}
