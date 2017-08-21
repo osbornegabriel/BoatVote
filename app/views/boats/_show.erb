@@ -1,2 +1,14 @@
-<p id="boat-view"><img src=<%="#{@boat.url}"%> ></p>
-<a id="boat-link" href=<%="/boats/#{@boat.id + 1}"%> >Show Me The Next One!!!</a>
+<div class="boat-display">
+  <p id="boat-view"><img src=<%="#{@boat.url}"%> ></p>
+  <a id="boat-link" href=<%="/boats/#{@boat.id + 1}"%> >Show Me The Next One!!!</a>
+
+  <br><br>
+
+  <span class="vote">
+    <a class="vote-link" href="/"><button>That's a boat!!!</button></a>
+    <a class="vote-link" href="/"><button>I'm not sure if this is a boat</button></a>
+    <a class="vote-link" href="/"><button>I don't think that's a boat</button></a>
+
+  </span>
+
+</div>

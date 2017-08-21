@@ -40,3 +40,22 @@ a:active{
 #logout-button:active{
   color: #ffb0b8;
 }
+
+.vote-link {
+  text-decoration: none;
+}
+
+button {
+  color: rgb(255,218,185);
+  text-shadow: 1px 1px black;
+
+}
+
+button:hover {
+  border: none;
+  text-shadow: -1px -1px black;
+}
+
+button:active {
+  text-shadow: -1.5px -1.5px black;
+}
