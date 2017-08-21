@@ -1,4 +1,4 @@
-get '/boats/:boat_id/votes/:vote_type' do
+get '/boats/:boat_id/boatvotes/:vote_type' do
   authenticate!
   @boat = Boat.find(params[:boat_id])
   @boatvote = BoatVote.find_by(boat_id: @boat.id, voter_id: current_user.id)
@@ -26,5 +26,5 @@ get '/boats/:boat_id/votes/:vote_type' do
       @boatvote.update_attribute("vote", -1)
     end
   end
-
+  redirect "/boats/#{@boat.id + 1}"
 end

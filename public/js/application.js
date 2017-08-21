@@ -1,16 +1,25 @@
 var $boatDisplay;
 var $boatView;
 var $boatLink;
+var $voteLink;
+var previousVoteValue;
+var $previousVote;
 
 
-function nextPicture(){
-
+function depressedVoteLink(){
+  previousVoteValue = $(".vote").attr("data-previous_vote");
+  $previousVote = $("." + previousVoteValue);
+  console.log(previousVoteValue);
+  console.log($previousVote);
+  $previousVote.addClass('vote-value');
 }
 
 
 $(document).ready(function() {
   console.log("Thar she blows!");
   $boatDisplay = $(".boat-display");
+
+  depressedVoteLink();
 
   $boatDisplay.on("click", "#boat-link", function(event){
     event.preventDefault();
