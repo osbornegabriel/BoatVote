@@ -15,10 +15,10 @@
       <p>AHOY <%= current_user.username %>!!</p>
       <form action="/sessions" method="POST">
         <input type="hidden" name="_method" value="DELETE">
-        <input id="logout-button" type="submit" value="lubber-out">
+        <input id="logout-button" type="submit" value="Lubber-out">
       </form>
     <% else %>
-      <p><a href="sessions/new">Login</a> | <a href="/boatwatchers/new">Enlist In The Crew</a></p>
+      <p><a href="/sessions/new">Login</a> | <a href="/boatwatchers/new">Enlist In The Crew</a></p>
     <% end %>
   </header>
   <%= yield %>

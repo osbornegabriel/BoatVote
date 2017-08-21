@@ -12,11 +12,11 @@ a:visited{
 }
 
 a:hover{
-  color: #ffb0b8;
+  text-shadow: -1px -1px black;
 }
 
 a:active{
-  color: red;
+  color: #ffb0b8;
 }
 
 #logout-button {
@@ -25,7 +25,7 @@ a:active{
     border:none;
     padding:0;
     font: inherit;
-    color: white;
+    color: rgb(255,218,185);
     text-shadow: 1px 1px black;;
 }
 
@@ -34,9 +34,33 @@ a:active{
 }
 
 #logout-button:hover{
-  color: #ffb0b8;
+  text-shadow: -1px -1px black;
 }
 
 #logout-button:active{
-  color: red;
+  color: #ffb0b8;
+}
+
+.vote-link {
+  text-decoration: none;
+}
+
+button {
+  color: rgb(255,218,185);
+  text-shadow: 1px 1px black;
+
+}
+
+button:hover {
+  border: none;
+  text-shadow: -1px -1px black;
+}
+
+button:active {
+  text-shadow: -1.5px -1.5px black;
+}
+
+.vote-value {
+  border: none;
+  text-shadow: -1px -1px black;
 }

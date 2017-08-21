@@ -8,4 +8,8 @@ helpers do
     !!current_user
   end
 
+  def authenticate!
+    redirect '/session/new' unless logged_in?
+  end
+
 end
