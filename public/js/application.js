@@ -1,7 +1,30 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+var $boatDisplay;
+var $boatView;
+var $boatLink;
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+function nextPicture(){
+
+}
+
+
+$(document).ready(function() {
+  console.log("Thar she blows!");
+  $boatDisplay = $(".boat-display");
+
+  $boatDisplay.on("click", "#boat-link", function(event){
+    event.preventDefault();
+    $boatLink = $(this);
+    var url = $boatLink.attr("href");
+
+    $.ajax({
+      method: 'GET',
+      url: url
+    }).done(function(response){
+      console.log(response);
+      $boatDisplay.html(response);
+    })
+  })
+
+
 });

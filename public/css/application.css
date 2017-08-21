@@ -12,11 +12,11 @@ a:visited{
 }
 
 a:hover{
-  color: #ffb0b8;
+  text-shadow: -1px -1px black;
 }
 
 a:active{
-  color: red;
+  color: #ffb0b8;
 }
 
 #logout-button {
@@ -34,9 +34,9 @@ a:active{
 }
 
 #logout-button:hover{
-  color: #ffb0b8;
+  text-shadow: -1px -1px black;
 }
 
 #logout-button:active{
-  color: red;
+  color: #ffb0b8;
 }
