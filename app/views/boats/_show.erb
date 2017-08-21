@@ -4,9 +4,9 @@
 
   <br><br>
 
-  <div class="vote">
-    <a class="vote-link" href=<%="/boats/#{@boat.id}/boatvotes/boat"%>><button>That's a boat!!!</button></a>
-    <a class="vote-link" href=<%="/boats/#{@boat.id}/boatvotes/maybeboat"%>><button>I'm not sure if this is a boat</button></a>
-    <a class="vote-link" href=<%="/boats/#{@boat.id}/boatvotes/notboat"%>><button>I don't think that's a boat</button></a>
+  <div class="vote" data-previous_vote="<%= @boatvote.vote_value %>" >
+    <a class="vote-link is-boat" href=<%="/boats/#{@boat.id}/boatvotes/boat"%>><button>That's a boat!!!</button></a>
+    <a class="vote-link maybe-boat" href=<%="/boats/#{@boat.id}/boatvotes/maybeboat"%>><button>I'm not sure if this is a boat</button></a>
+    <a class="vote-link not-boat" href=<%="/boats/#{@boat.id}/boatvotes/notboat"%>><button>I don't think that's a boat</button></a>
   </div>
 </div>

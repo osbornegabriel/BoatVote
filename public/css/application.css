@@ -59,3 +59,8 @@ button:hover {
 button:active {
   text-shadow: -1.5px -1.5px black;
 }
+
+.vote-value {
+  border: none;
+  text-shadow: -1px -1px black;
+}

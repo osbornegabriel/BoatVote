@@ -11,7 +11,8 @@ function depressedVoteLink(){
   $previousVote = $("." + previousVoteValue);
   console.log(previousVoteValue);
   console.log($previousVote);
-  $previousVote.addClass('vote-value');
+  $previousVote.removeAttr('href');
+  $previousVote.find('button').addClass('vote-value');
 }
 
 
