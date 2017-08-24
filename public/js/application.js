@@ -13,8 +13,6 @@ $(document).ready(function() {
   nextBoat();
 });
 
-
-
 function depressedVoteLink(){
   previousVoteValue = $(".vote").attr("data-previous_vote");
   $previousVote = $(".vote").find("." + previousVoteValue);
