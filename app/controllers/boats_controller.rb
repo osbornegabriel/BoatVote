@@ -1,5 +1,9 @@
+get "/boats/no_boats" do
+  erb :"boats/no_boats"
+end
+
 get '/boats/:id' do
-  erb :"boats/no_boats" unless Boat.all.reduce(:+) != nil
+  redirect "/boats/no_boats" unless Boat.all.length != 0
   @boat = Boat.find_by(id: params[:id])
   @boat ||= Boat.find(1)
   if logged_in?
