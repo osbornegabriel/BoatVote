@@ -33,6 +33,7 @@ $(document).ready(function() {
     }).done(function(response){
       // console.log(response);
       $boatDisplay.html(response);
+      depressedVoteLink();
     })
   })
 

@@ -6,6 +6,7 @@ get '/boats/:id' do
    @boatvote_value = @boatvote.vote_value if @boatvote
   end
   if request.xhr?
+
     erb :'boats/_show', layout: false
   else
     erb :'boats/show'
