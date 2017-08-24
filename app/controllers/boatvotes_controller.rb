@@ -1,3 +1,9 @@
+get '/boats/:boat_id/boatvotes/:vote_type/edit' do
+  @boat = Boat.find(params[:boat_id])
+  boatvote_type(params[:vote_type])
+  erb :"boatvotes/_show_value", layout: false
+end
+
 get '/boats/:boat_id/boatvotes/:vote_type' do
   authenticate!
   @boat = Boat.find(params[:boat_id])
@@ -26,5 +32,19 @@ get '/boats/:boat_id/boatvotes/:vote_type' do
       @boatvote.update_attribute("vote", -1)
     end
   end
-  redirect "/boats/#{@boat.id + 1}"
+  if request.xhr?
+    params[:vote_type]
+  else
+    redirect "/boats/#{@boat.id + 1}"
+  end
 end
+
+
+
+    # @boat = Boat.find_by(id: (@boat.id + 1))
+    # @boat ||= Boat.find(1)
+    # if logged_in?
+    #  @boatvote = BoatVote.find_by(boat_id: @boat.id, voter_id: current_user.id)
+    #  @boatvote_value = @boatvote.vote_value if @boatvote
+    # end
+    # erb :'boats/_show', layout: false
