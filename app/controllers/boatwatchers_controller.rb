@@ -12,3 +12,8 @@ post '/boatwatchers' do
     erb :'boatwatchers/new'
   end
 end
+
+get '/boatwatchers/:id' do
+  @boatwatcher = BoatWatcher.find_by(id: params[:id])
+  erb :'boatwatchers/show'
+end

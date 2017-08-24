@@ -9,8 +9,8 @@ var $previousVote;
 function depressedVoteLink(){
   previousVoteValue = $(".vote").attr("data-previous_vote");
   $previousVote = $("." + previousVoteValue);
-  console.log(previousVoteValue);
-  console.log($previousVote);
+  // console.log(previousVoteValue);
+  // console.log($previousVote);
   $previousVote.removeAttr('href');
   $previousVote.find('button').addClass('vote-value');
 }
@@ -31,7 +31,7 @@ $(document).ready(function() {
       method: 'GET',
       url: url
     }).done(function(response){
-      console.log(response);
+      // console.log(response);
       $boatDisplay.html(response);
     })
   })
