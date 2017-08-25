@@ -13,6 +13,7 @@ doc/api
 doc/app
 curriculum/.pygments-cache
 curriculum/public/*
+.env
 public/assets
 *.tmproj
 *~
