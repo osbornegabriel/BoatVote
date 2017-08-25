@@ -1,7 +1,7 @@
 require "faker"
 
-# bw1 = BoatWatcher.new(username: 'Boatchami_Mucho', email: 'boat@email.com', password: 'password')
-# bw1.save
+bw1 = BoatWatcher.new(username: 'Boatchami_Mucho', email: 'boat@email.com', password: 'password')
+bw1.save
 bw2 = BoatWatcher.new(username: "Boats n' Boas", email: 'boats@email.com', password: 'password')
 bw2.save
 bw3 = BoatWatcher.new(username: 'Boatmagedon2012', email: 'boatmagedon@email.com', password: 'password')
@@ -33,22 +33,22 @@ def random_boolean
   [true, false].sample
 end
 
-Boat.all.each do |boat|
-  bw4.boat_votes.create(boat: boat, vote: false)
-end
+# Boat.all.each do |boat|
+#   bw4.boat_votes.create(boat: boat, vote: false)
+# end
 
-Boat.all.each do |boat|
-  bw2.boat_votes.create(boat: boat, vote: true)
-end
+# Boat.all.each do |boat|
+#   bw2.boat_votes.create(boat: boat, vote: true)
+# end
 
-Boat.all.each do |boat|
-  bw5.boat_votes.create(boat: boat, vote: random_boolean)
-end
+# Boat.all.each do |boat|
+#   bw5.boat_votes.create(boat: boat, vote: random_boolean)
+# end
 
 # Boat.all.each do |boat|
 #   bw1.boat_votes.create(boat: boat)
 # end
 
-Boat.all.each do |boat|
-  bw3.boat_votes.create(boat: boat, vote: random_boolean)
-end
+# Boat.all.each do |boat|
+#   bw3.boat_votes.create(boat: boat, vote: random_boolean)
+# end
