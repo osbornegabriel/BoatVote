@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'bcrypt'
+gem 'faker'
+
 # PostgreSQL driver
 gem 'pg'
 
@@ -24,5 +26,4 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
 end
