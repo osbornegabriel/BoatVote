@@ -2,6 +2,16 @@ get "/boats/no_boats" do
   erb :"boats/no_boats"
 end
 
+post '/boats' do
+  authenticate!
+  @boat = Boat.new(url: params[:url], discoverer_id: current_user.id)
+  if @boat.save
+    redirect "/boats/#{@boat.id}"
+  else
+    redirect "/random"
+  end
+end
+
 get '/boats/:id' do
   redirect "/boats/no_boats" unless Boat.all.length != 0
   @boat = Boat.find_by(id: params[:id])

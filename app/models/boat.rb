@@ -5,4 +5,6 @@ class Boat < ActiveRecord::Base
   has_many :voters, through: :boat_votes, source: :voter
 
   validates_presence_of :url, :discoverer_id
+
+
 end

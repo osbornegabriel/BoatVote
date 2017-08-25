@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'awesome_print'
 gem 'bcrypt'
+gem 'dotenv'
 gem 'faker'
+gem 'httparty'
 
 # PostgreSQL driver
 gem 'pg'
