@@ -1,6 +1,6 @@
 require "faker"
 
-bw1 = BoatWatcher.new(username: 'Boatchami_Mucho', email: 'boat@email.com', password: 'password')
+# bw1 = BoatWatcher.new(username: 'Boatchami_Mucho', email: 'boat@email.com', password: 'password')
 bw1.save
 bw2 = BoatWatcher.new(username: "Boats n' Boas", email: 'boats@email.com', password: 'password')
 bw2.save
