@@ -33,22 +33,22 @@ def random_boolean
   [true, false].sample
 end
 
-Boat.all.each do |boat|
-  bw4.boat_votes.create(boat: boat, vote: false)
-end
+# Boat.all.each do |boat|
+#   bw4.boat_votes.create(boat: boat, vote: false)
+# end
 
-Boat.all.each do |boat|
-  bw2.boat_votes.create(boat: boat, vote: true)
-end
+# Boat.all.each do |boat|
+#   bw2.boat_votes.create(boat: boat, vote: true)
+# end
 
-Boat.all.each do |boat|
-  bw5.boat_votes.create(boat: boat, vote: random_boolean)
-end
+# Boat.all.each do |boat|
+#   bw5.boat_votes.create(boat: boat, vote: random_boolean)
+# end
 
-Boat.all.each do |boat|
-  bw1.boat_votes.create(boat: boat)
-end
+# Boat.all.each do |boat|
+#   bw1.boat_votes.create(boat: boat)
+# end
 
-Boat.all.each do |boat|
-  bw3.boat_votes.create(boat: boat, vote: random_boolean)
-end
+# Boat.all.each do |boat|
+#   bw3.boat_votes.create(boat: boat, vote: random_boolean)
+# end
