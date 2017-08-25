@@ -1,4 +1,5 @@
 class Boat < ActiveRecord::Base
+  include HTTParty
   # Remember to create a migration!
   belongs_to :discoverer, class_name: BoatWatcher
   has_many :boat_votes
