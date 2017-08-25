@@ -1,5 +1,4 @@
 class Boat < ActiveRecord::Base
-  include HTTParty
   # Remember to create a migration!
   belongs_to :discoverer, class_name: BoatWatcher
   has_many :boat_votes
@@ -7,9 +6,5 @@ class Boat < ActiveRecord::Base
 
   validates_presence_of :url, :discoverer_id
 
-  def self.random_boat
-    response = HTTParty.get("http://api.giphy.com/v1/gifs/random?api_key=GIPHY_API")
 
-    # HTTParty.get('http://api.giphy.com/v1/gifs/search?q=boat&api_key=GIPHY_API')
-  end
 end

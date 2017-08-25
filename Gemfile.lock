@@ -15,6 +15,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    awesome_print (1.8.0)
     backports (3.6.4)
     bcrypt (3.1.11)
     builder (3.2.2)
@@ -25,6 +26,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     diff-lcs (1.2.5)
+    dotenv (2.2.1)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     faker (1.4.3)
@@ -88,8 +90,10 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
+  awesome_print
   bcrypt
   capybara
+  dotenv
   factory_girl
   faker
   httparty

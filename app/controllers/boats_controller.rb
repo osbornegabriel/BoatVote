@@ -2,8 +2,14 @@ get "/boats/no_boats" do
   erb :"boats/no_boats"
 end
 
-get "/boats/random" do
-  # http://api.giphy.com/v1/gifs/search?q=boat&api_key=1366d5c4f8c0488d90875be36b28ba65
+post '/boats' do
+  authenticate!
+  @boat = Boat.new(url: params[:url], discoverer_id: current_user.id)
+  if @boat.save
+    redirect "/boats/#{@boat.id}"
+  else
+    redirect "/random"
+  end
 end
 
 get '/boats/:id' do

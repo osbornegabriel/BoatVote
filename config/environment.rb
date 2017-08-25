@@ -2,12 +2,15 @@
 # See: http://gembundler.com/bundler_setup.html
 #      http://stackoverflow.com/questions/7243486/why-do-you-need-require-bundler-setup
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+# ENV['GIPHY_API']
 
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
 
+require 'awesome_print'
+require 'dotenv/load'
 require 'httparty'
 
 require 'uri'
