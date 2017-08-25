@@ -6,4 +6,10 @@ class Boat < ActiveRecord::Base
   has_many :voters, through: :boat_votes, source: :voter
 
   validates_presence_of :url, :discoverer_id
+
+  def self.random_boat
+    response = HTTParty.get("http://api.giphy.com/v1/gifs/random?api_key=GIPHY_API")
+
+    # HTTParty.get('http://api.giphy.com/v1/gifs/search?q=boat&api_key=GIPHY_API')
+  end
 end
